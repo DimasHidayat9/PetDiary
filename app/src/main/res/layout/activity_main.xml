@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarInput"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        app:elevation="0dp"
+        app:title="Tambah Jadwal"
+        app:titleTextColor="#000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/mainContentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:gravity="center_horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Hewan"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etNamaHewan"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Contoh: Meong"
+                        android:textColor="#000000"
+                        android:textColorHint="#757575"
+                        android:textSize="16sp" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginBottom="24dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jam Makan Pagi"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etMakanPagi"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Pilih waktu"
+                        android:textColor="#000000"
+                        android:textColorHint="#757575"
+                        android:focusable="false"
+                        android:textSize="16sp" />
+
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E0E0E0" android:layout_marginBottom="24dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jam Makan Sore"
+                        android:textColor="#000000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etMakanSore"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Pilih waktu"
+                        android:textColor="#000000"
+                        android:textColorHint="#757575"
+                        android:focusable="false"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnBuatJadwal"
+                android:layout_width="174dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#4CB1BF"
+                android:text="Buat Jadwal"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:cornerRadius="25dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
